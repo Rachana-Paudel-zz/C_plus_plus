@@ -1,367 +1,367 @@
-//<--------------------------constructor---------------------------------------------------------------------------->
-//special member method that is invoked during object creation.
-//useful for intialization
-//same as the class
-//no return type is specified
-//can be overloaded
+<--------------------------constructor---------------------------------------------------------------------------->
+special member method that is invoked during object creation.
+useful for intialization
+same as the class
+no return type is specified
+can be overloaded
 
-//class player{
-//    private;
-//    string name;
-//    int health;
-//    int xp;
-//    public;
-//    //overloaded constructor
-//    player();
-//    player();player(String name);
-//    player(string name,int health, int xp)
-//}
-//
-////<----------------------------Destructor-------------------------------------------------------------------------->
-////special member used when object goes out of scope.
-////same name as class procees with a tilde(~).
-////invoked automatically when an object is destroyed.
-////only one destructor is allowed per class-cannot be overloaded
-////useful to release memory and other resources.
-//}
+class player{
+    private;
+    string name;
+    int health;
+    int xp;
+    public;
+    //overloaded constructor
+    player();
+    player();player(String name);
+    player(string name,int health, int xp)
+}
 
-//<----------------------------------p1---------------->
-//#include <iostream>
-//using namespace std;
-//
-//class Student
-//{
-//   public:
-//   int rollno;
-//   string name;
-//   // first constructor
-//   Student(int x)
-//   {
-//       rollno = x;
-//       name = "Rachu"; //initialize of constructor
-//   }
-//   // second constructor
-//   Student(int x, string str)
-//   {
-//       rollno = x;
-//       name = str;
-//   }
-//   ~student() //destructor
-//   cout<<"Constructor is deleted"<<endl;
-//};
-//
-//int main()
-//{
-//   // student A initialized with roll no 10 and name None
-//   Student A(10); //obj
-//   
-//   // student B initialized with roll no 11 and name Lucifer
-//   Student B(11, "Lucifer");
-//}
-//
+<----------------------------Destructor-------------------------------------------------------------------------->
+special member used when object goes out of scope.
+same name as class procees with a tilde(~).
+invoked automatically when an object is destroyed.
+only one destructor is allowed per class-cannot be overloaded
+useful to release memory and other resources.
+}
 
-//---------------------------------p2---------------------------------------------------->
+<----------------------------------p1---------------->
+#include <iostream>
+using namespace std;
 
-//#include<iostream>
-//#include<string>
-//using namespace std;
-//class Player{
-//private:
-//    string name;
-//    int health;
-//    int xp;
-//public:
-//    void set_name(string name_val){ //method
-//    name=name_val;
-//    }
-//    //overloadedconstructor
-//    
-//    Player(){
-//        cout<<"No args constructor called"<<endl;
-//    }
-//    Player(String name){
-//        cout<<"Single args constructor"<<endl;
-//    }
+class Student
+{
+  public:
+  int rollno;
+  string name;
+  // first constructor
+  Student(int x)
+  {
+      rollno = x;
+      name = "Rachu"; //initialize of constructor
+  }
+  // second constructor
+  Student(int x, string str)
+  {
+      rollno = x;
+      name = str;
+  }
+  ~student() //destructor
+  cout<<"Constructor is deleted"<<endl;
+};
 
-//    Player(string name,int health, int xp){
-//        cout<<"Three args construcctor"<<endl;
-//    }
-//    ~Player(){
-//        cout<<"Destructor called for"<<name<<endl;
-//    }
-//    
-//};
-//int main(){
-//    Player slayer;
-//    slayer.set_name("Slayer");
-//
-//        Player frank;
-//        frank.set_name("Frank");
-
-//        Player hero;
-//        hero.set_name("Hero");
-
-//        Player Villain("Villain",100,15);
-//        Villain.set_name("Villain");
-
-//        Player boss("Boss", 200); //not supported
-//        boss.set_name("Boss");
-//    }
-//}
-
-//<----------------------------------Default constructor(No args constructor)-----p3--------------------------------->
-//Doesnot accept any arguments.
-//If you write no constructor at all for a class, c++ will generate a default constructor that does nothing.
-//It is called when you instantiate a new object with no arguments.
-
-//class Account {
-//private:
-//string name;
-//double balance;
-//public:
-//Account(){ //initialization of constructor
-//    name="Name";
-//    balance=0.0;
-//}
-//string get_name(){return name;}
-//bool withdraw(double amount);
-//bool deposite(double amount);
-//};
-//int main(){
-//    Account jimmy;
-//    jimmy.get_name();
-//    
-//}
-//}
+int main()
+{
+  // student A initialized with roll no 10 and name None
+  Student A(10); //obj
+  
+  // student B initialized with roll no 11 and name Lucifer
+  Student B(11, "Lucifer");
+}
 
 
+---------------------------------p2---------------------------------------------------->
 
+#include<iostream>
+#include<string>
+using namespace std;
+class Player{
+private:
+    string name;
+    int health;
+    int xp;
+public:
+    void set_name(string name_val){ //method
+    name=name_val;
+    }
+    //overloadedconstructor
+    
+    Player(){
+        cout<<"No args constructor called"<<endl;
+    }
+    Player(String name){
+        cout<<"Single args constructor"<<endl;
+    }
 
+    Player(string name,int health, int xp){
+        cout<<"Three args construcctor"<<endl;
+    }
+    ~Player(){
+        cout<<"Destructor called for"<<name<<endl;
+    }
+    
+};
+int main(){
+    Player slayer;
+    slayer.set_name("Slayer");
 
-//<------------------------------default//--------------------------------------p4------------------------>
-//#include <iostream>
-//using namespace std;
-//class myclass {
-//   private:
-//   int num1, num2 ;
-//   public:
-//   myclass() {  //userdefined-default constructor//
-//      num1 = 10;
-//      num2 = 20;
-//   }
-//   void get_name() {
-//      cout<<"num1 = "<< num1 <<endl;
-//      cout<<"num2 = "<< num2 <<endl;
-//      cout<<"Work completed."<<endl;
-//
-//   }
-//};
-//int main() {
-//   myclass obj;
-//   obj.get_name();
-//   return 0;
-//}
+        Player frank;
+        frank.set_name("Frank");
 
-//<--------------------------------------parametarized-----------------------------p5----------------------------------------------------->
-//#include <iostream>
-//using namespace std;
-//class A {
-//   private:
-//   int num1, num2 ;
-//   public:
-//   A(int n1, int n2) {
-//      num1 = n1;
-//      num2 = n2;
-//   }
-//   void display() {
-//      cout<<"num1 = "<< num1 <<endl;
-//      cout<<"num2 = "<< num2 <<endl;
-//   }
-//};
-//int main() {
-//   A obj(3,8);
-//   obj.display();
-//   return 0;
-//}
+        Player hero;
+        hero.set_name("Hero");
 
+        Player Villain("Villain",100,15);
+        Villain.set_name("Villain");
 
+        Player boss("Boss", 200); //not supported
+        boss.set_name("Boss");
+    }
+}
 
-//<--------------------------------------------------copy---------------------------p6------------------------------------------>
-//#include<iostream> 
-//using namespace std; 
-//
-//class Point 
-//{ 
-//    private: 
-//    	int x, y; 
-//    public: 
-//    	Point(int x1, int y1) {//	Point(int 10, int 15) {
-//    	    x = x1;            //       x = 10;  (also known as p1.x)
-//    	    y = y1;            //       y = 15;  (also known as p1.y)
-//    	}                      //  }     
-//    
-//    	// Copy constructor 
-//    	Point(const Point &p2) {
-//    	    x = p2.x;           //p1.x=p2.x
-//    	    y = p2.y;           //p1.y=p2.y
-//    	} 
-//    
-//    	int getX(){ 
-//    	    return x; 
-//    	} 
-//    	int getY(){ 
-//    	    return y;
-//    	} 
-//}; 
+<----------------------------------Default constructor(No args constructor)-----p3--------------------------------->
+Doesnot accept any arguments.
+If you write no constructor at all for a class, c++ will generate a default constructor that does nothing.
+It is called when you instantiate a new object with no arguments.
 
-//int main() 
-//{ 
-//	Point p1(10, 15); // Normal constructor is called here 
-//	Point p2 = p1; // Copy constructor is called here 
-//
-//	// Let us access values assigned by constructors 
-//	cout << "p1.x = " << p1.getX() << ", p1.y = " << p1.getY(); 
-//	cout << "\np2.x = " << p2.getX() << ", p2.y = " << p2.getY(); 
-//
-//	return 0; 
-//}
+class Account {
+private:
+string name;
+double balance;
+public:
+Account(){ //initialization of constructor
+    name="Name";
+    balance=0.0;
+}
+string get_name(){return name;}
+bool withdraw(double amount);
+bool deposite(double amount);
+};
+int main(){
+    Account jimmy;
+    jimmy.get_name();
+    
+}
+}
 
 
 
 
 
-/*-----------------------------C++ program to demonstrate example of Copy Constructor.--------p7----------------------*/
-//#include <iostream>
-//using namespace std;
-//class demo
-//{
-// private:
-// int X;
-// int Y;
-// public:
-// demo () {  // default constructor
-// demo (int a, int b); //parameterized constructor
-// demo (const demo &d); //copy constructor
-// void display();
-// }
-//};
-////Definition of parameterized constructor.
-//demo:: demo(int a, int b)
-//{
-// X = a;
-// Y = b;
-//}
-////Definition of copy constructor.
-//demo:: demo(const demo &d)
-//{
-// X = d.X;
-// Y = d.Y;
-//}
-////Definition of display (),the member function.
-//void demo:: display()
-//{
-// cout <<"\n X: " << X;
-// cout <<"\n Y: " << Y;
-//}
-//int main()
-//{
-// demo d1(10,20) ; // creates an object
-// cout<<”\n data members of the created object “;
-// cout <<”\n Object d1 : ";
-// cout<<"Values initialized by parameterized constructor: ";
-// d1.Display();
-// /* create and initialize object with other object using
-//copy constructor */
-// demo d2 = demo(d1);
-// cout<<”\n\n object d2, created by copy constructor”;
-// cout <<”\n Object d2 : " ;
-// cout << "Value initialized by copy constructor : ";
-// d2.display();
-// return 0;
-//}
+<------------------------------default//--------------------------------------p4------------------------>
+#include <iostream>
+using namespace std;
+class myclass {
+  private:
+  int num1, num2 ;
+  public:
+  myclass() {  //userdefined-default constructor//
+     num1 = 10;
+     num2 = 20;
+  }
+  void get_name() {
+     cout<<"num1 = "<< num1 <<endl;
+     cout<<"num2 = "<< num2 <<endl;
+     cout<<"Work completed."<<endl;
+
+  }
+};
+int main() {
+  myclass obj;
+  obj.get_name();
+  return 0;
+}
+
+<--------------------------------------parametarized-----------------------------p5----------------------------------------------------->
+#include <iostream>
+using namespace std;
+class A {
+  private:
+  int num1, num2 ;
+  public:
+  A(int n1, int n2) {
+     num1 = n1;
+     num2 = n2;
+  }
+  void display() {
+     cout<<"num1 = "<< num1 <<endl;
+     cout<<"num2 = "<< num2 <<endl;
+  }
+};
+int main() {
+  A obj(3,8);
+  obj.display();
+  return 0;
+}
 
 
 
-//<----------------------------------------copy constructor----------p8----------------->
-//when objects are copied c++ must create a new object from an existing object.
-//When is a copy of object made?
-//Passing objects by value as a parameters.
-//Returning an object from a function by value.
-//Constructing one object based on another of the same class.
-//C++ must have a way of accomplishing this so it provides a compiler defined copy construcor if you dont.
+<--------------------------------------------------copy---------------------------p6------------------------------------------>
+#include<iostream> 
+using namespace std; 
+
+class Point 
+{ 
+    private: 
+    	int x, y; 
+    public: 
+    	Point(int x1, int y1) {//	Point(int 10, int 15) {
+    	    x = x1;            //       x = 10;  (also known as p1.x)
+    	    y = y1;            //       y = 15;  (also known as p1.y)
+    	}                      //  }     
+    
+    	// Copy constructor 
+    	Point(const Point &p2) {
+    	    x = p2.x;           //p1.x=p2.x
+    	    y = p2.y;           //p1.y=p2.y
+    	} 
+    
+    	int getX(){ 
+    	    return x; 
+    	} 
+    	int getY(){ 
+    	    return y;
+    	} 
+}; 
+
+int main() 
+{ 
+	Point p1(10, 15); // Normal constructor is called here 
+	Point p2 = p1; // Copy constructor is called here 
+
+	// Let us access values assigned by constructors 
+	cout << "p1.x = " << p1.getX() << ", p1.y = " << p1.getY(); 
+	cout << "\np2.x = " << p2.getX() << ", p2.y = " << p2.getY(); 
+
+	return 0; 
+}
 
 
-//use case I: When we pass an object to a function or method by value.
-//object creation and initialization.
-//Player hero{"Hero",100,20};
 
-//function declaration using object as a parameters.
-//void display_player(Player p){ //p is a copy of hero i.e.{"Hero",100,20};
-    //p is a copy of hero in this example.
-    //destructor of p will be called.   
-//}
-//function call using the object as a argument.
-//display_player(hero);
+
+
+-----------------------------C++ program to demonstrate example of Copy Constructor.--------p7----------------------
+#include <iostream>
+using namespace std;
+class demo
+{
+private:
+int X;
+int Y;
+public:
+demo () {  // default constructor
+demo (int a, int b); //parameterized constructor
+demo (const demo &d); //copy constructor
+void display();
+}
+};
+//Definition of parameterized constructor.
+demo:: demo(int a, int b)
+{
+X = a;
+Y = b;
+}
+//Definition of copy constructor.
+demo:: demo(const demo &d)
+{
+X = d.X;
+Y = d.Y;
+}
+//Definition of display (),the member function.
+void demo:: display()
+{
+cout <<"\n X: " << X;
+cout <<"\n Y: " << Y;
+}
+int main()
+{
+demo d1(10,20) ; // creates an object
+cout<<”\n data members of the created object “;
+cout <<”\n Object d1 : ";
+cout<<"Values initialized by parameterized constructor: ";
+d1.Display();
+/* create and initialize object with other object using
+copy constructor */
+demo d2 = demo(d1);
+cout<<”\n\n object d2, created by copy constructor”;
+cout <<”\n Object d2 : " ;
+cout << "Value initialized by copy constructor : ";
+d2.display();
+return 0;
+}
+
+
+
+<----------------------------------------copy constructor----------p8----------------->
+when objects are copied c++ must create a new object from an existing object.
+When is a copy of object made?
+Passing objects by value as a parameters.
+Returning an object from a function by value.
+Constructing one object based on another of the same class.
+C++ must have a way of accomplishing this so it provides a compiler defined copy construcor if you dont.
+
+
+use case I: When we pass an object to a function or method by value.
+object creation and initialization.
+Player hero{"Hero",100,20};
+
+function declaration using object as a parameters.
+void display_player(Player p){ //p is a copy of hero i.e.{"Hero",100,20};
+    p is a copy of hero in this example.
+    destructor of p will be called.   
+}
+function call using the object as a argument.
+display_player(hero);
 
 <-------------------------------------------------------------------------------------------->
 //Usecase II:
 
-//object creation
-//Player enemy:
+object creation
+Player enemy:
 
-//funtion decalration with player class type
-//Player create_super_enemy(){
-//    Player an_enemy{"Super_enemy",1000,1000};
-//    return an enemy;//A copy of an enemy is returned
-//}
+funtion decalration with player class type
+Player create_super_enemy(){
+    Player an_enemy{"Super_enemy",1000,1000};
+    return an enemy;//A copy of an enemy is returned
+}
 
 //function call
 //enemy=create_super_enemy();
 
 
 <-----------------------------------p9----------------->
-//usecase III:
-//Player hero{"Hero",100,100};
-//Player another_hero{hero};//A copy of hero is made.
+usecase III:
+Player hero{"Hero",100,100};
+Player another_hero{hero};//A copy of hero is made.
 
 
-//double balance(){
-//return balance;
-//}
-//class Player{
-//private:
-//    string name;
-//    int health;
-//    int xp;
-//public:
-//string get_name(){return name:}
-//int ge_name(){return health;}
-//int get_xp(){return xp;}
-//
-//Player(string name_val="None", int health_val=0, int xp_val=0;
-//);
-////copy constructor
-//Player(const Player &source);
-////Destructor
-//~Player(){cout<<"Destructor is called for:"<<name<<endl;}
-//};
-//Player::Player(const Player &source)
-//:name{source.name},health{source.health},xp{source.xp}{
-//    cout<<"Copy constructor-made acopy of "<<source.name<<eendl;
-//}
-//void display_player(Player p){
-//    cout<<"Name:"<<p.get_name()<<endl;
-//    cout<<"Health:"<<p.get_name()<<endl;
-//    cout<<"xp:"<<p.get_xp()<<endl;
-//}
-//int main(){
-//    Player empty;
-//    display_player(empty);
-//    Player frank("Frank");
-//    Player hero("Hero",100);
-//    Player villain("Villain",100.55);
-//    return 0;
-//}    
+double balance(){
+return balance;
+}
+class Player{
+private:
+    string name;
+    int health;
+    int xp;
+public:
+string get_name(){return name:}
+int ge_name(){return health;}
+int get_xp(){return xp;}
+
+Player(string name_val="None", int health_val=0, int xp_val=0;
+);
+//copy constructor
+Player(const Player &source);
+//Destructor
+~Player(){cout<<"Destructor is called for:"<<name<<endl;}
+};
+Player::Player(const Player &source)
+:name{source.name},health{source.health},xp{source.xp}{
+    cout<<"Copy constructor-made acopy of "<<source.name<<eendl;
+}
+void display_player(Player p){
+    cout<<"Name:"<<p.get_name()<<endl;
+    cout<<"Health:"<<p.get_name()<<endl;
+    cout<<"xp:"<<p.get_xp()<<endl;
+}
+int main(){
+    Player empty;
+    display_player(empty);
+    Player frank("Frank");
+    Player hero("Hero",100);
+    Player villain("Villain",100.55);
+    return 0;
+}    
  
 
 
